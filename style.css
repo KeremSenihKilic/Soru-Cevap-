@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@200;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'poppins';
+    background: url(hehehehehaww.webp)center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    margin: 0;
+    overflow: hidden;
+    background-image: cover;
+}
+.quizcontainer{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 2px rgb(141, 135, 135);
+    width: 600px;
+    
+}
+
+.quizheader{
+    padding: 4rem;
+}
+
+
+h2 {
+    padding: 0 2rem;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+ul li label{
+   cursor: pointer; 
+}
+
+.submit{
+    border: none;
+    background-color: red;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'poppins';
+    font-size: 1.6rem;
+    display: block;
+    border-radius: 0 0 10px;
+    width: 100%;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+#submit:focus::after{
+    content: ', This Is My Last Choice 🧐 ';
+}
+
+#submit:focus{
+    background-color: rgba(1, 188, 244, 0.737);
+    
+}
+
+[type='radio']:checked, 
+[type='radio']:not(:checked) {
+display: none;
+}
+
+[type='radio']:checked + label,
+[type='radio']:not(:checked) + label {
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+}
+
+[type='radio']:checked +label:before,
+[type='radio']:not(:checked) + label:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border:1px solid #ddd;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 100%;
+}
+
+[type='radio']:checked +label::after,
+[type='radio']:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background-color: rgb(79, 229, 255);
+    width: 0.75rem;
+    height: 0.75rem;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    border-radius: 100%;
+}
+
+[type='radio']:not(:checked) + label:after {
+    opacity: 0;
+    
+}
+
+[type='radio']:checked +label::after {
+    opacity: 1;
+    
+}
+
